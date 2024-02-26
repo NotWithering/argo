@@ -5,7 +5,7 @@
 ## Example
 ```go
 // cli application
-package argo
+package main
 
 import (
 	"bufio"
