@@ -11,6 +11,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/NotWithering/argo"
 )
@@ -25,6 +26,7 @@ func main() {
 			fmt.Println(err)
 			return
 		}
+		in = strings.TrimSpace(in)
 
 		args, incomplete := argo.Parse(in)
 		if incomplete {
@@ -32,10 +34,21 @@ func main() {
 			continue
 		}
 
-		fmt.Println(args)
+		for i, a := range args {
+			if i != 0 {
+				fmt.Print(", ")
+			}
+			fmt.Printf("\"%s\"", a)
+		}
+		fmt.Print("\n")
+
+		if len(args) > 0 {
+			if args[0] == "exit" {
+				return
+			}
+		}
 	}
 }
-
 ```
 
 ## What does Argo mean?
