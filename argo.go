@@ -9,7 +9,7 @@ package argo
 // s is valid, or needs to be completed. If incomplete
 // is true, arguments will be empty.
 func Parse(s string) (arguments []string, incomplete bool) {
-	var args = make([]string, 10)
+	var args = make([]string, 0, 10)
 
 	if !Terminates(s) {
 		return args, true
