@@ -19,6 +19,10 @@ func TestParse(t *testing.T) {
 		{"new\\nline", []string{"new\nline"}, false},
 		{"\"quoted string\"", []string{"quoted string"}, false},
 		{"'single quoted'", []string{"single quoted"}, false},
+		{"'single quoted' arg", []string{"single quoted", "arg"}, false},
+		{"\"double quoted\" arg", []string{"double quoted", "arg"}, false},
+		{"arg 'single quoted'", []string{"arg", "single quoted"}, false},
+		{"arg \"double quoted\"", []string{"arg", "double quoted"}, false},
 	}
 
 	for _, tc := range testCases {

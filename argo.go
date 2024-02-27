@@ -65,9 +65,17 @@ func Parse(s string) (arguments []string, incomplete bool) {
 					arg = ""
 				}
 			case '"':
-				quote = "\""
+				if quote == "" {
+					quote = "\""
+				} else if quote == "\"" {
+					quote = ""
+				}
 			case '\'':
-				quote = "\""
+				if quote == "" {
+					quote = "'"
+				} else if quote == "'" {
+					quote = ""
+				}
 			default:
 				arg += string(r)
 			}
