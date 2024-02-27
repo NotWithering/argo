@@ -12,6 +12,9 @@ func TestParse(t *testing.T) {
 		expectedInc  bool
 	}{
 		{"\"hello world", []string{}, true},
+		{"'hello world", []string{}, true},
+		{"hello world\"", []string{}, true},
+		{"hello world'", []string{}, true},
 		{"hello world", []string{"hello", "world"}, false},
 		{"arg1 arg2 'arg 3'", []string{"arg1", "arg2", "arg 3"}, false},
 		{"foo\\\\bar", []string{"foo\bar"}, false},
