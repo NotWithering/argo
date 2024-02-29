@@ -1,4 +1,6 @@
-# Argo [![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/NotWithering/argo/blob/master/LICENSE)
+# Argo
+[![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/NotWithering/argo/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/NotWithering/argo)](https://goreportcard.com/report/github.com/NotWithering/argo)
 
 **Argo** is a simple package designed to parse strings into command-line arguments following the POSIX Shell Command Language.
 
