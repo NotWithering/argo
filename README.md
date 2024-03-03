@@ -1,12 +1,11 @@
-= Argo
-image::https://img.shields.io/badge/License-MIT-a10b31[License](https://github.com/NotWithering/argo/blob/master/LICENSE)
-image::https://goreportcard.com/badge/github.com/NotWithering/argo[Report Card](https://goreportcard.com/report/github.com/NotWithering/argo)
+# Argo
+[![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/NotWithering/argo/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/NotWithering/argo)](https://goreportcard.com/report/github.com/NotWithering/argo)
 
-*Argo* is a simple package designed to parse strings into command-line arguments following the POSIX Shell Command Language.
+**Argo** is a simple package designed to parse strings into command-line arguments following the POSIX Shell Command Language.
 
-== Example
-[,go]
----
+## Example
+```go
 // cli application
 package main
 
@@ -52,7 +51,7 @@ func main() {
 		}
 	}
 }
----
+```
 
 ## What does Argo mean?
-*Ar* *_g_* ument *_G_* *o*
+**Ar*****g***ument ***G*****o**
