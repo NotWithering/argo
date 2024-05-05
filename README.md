@@ -36,13 +36,11 @@ func main() {
 			continue
 		}
 
-		for i, a := range args {
-			if i != 0 {
-				fmt.Print(", ")
-			}
-			fmt.Printf("\"%s\"", a)
-		}
-		fmt.Print("\n")
+		// example output:
+		// "go", "build", "-ldflags", "-s -w"
+		fmt.Print("\"")
+		fmt.Print(strings.Join(args, "\", \""))
+		fmt.Println("\"")
 
 		if len(args) > 0 {
 			if args[0] == "exit" {
